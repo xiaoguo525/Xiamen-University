@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	    *{
+		    padding: 0;
+		    margin: 0;
+	    }
+ 	    ul{
+ 		    list-style: none;
+	    }
+	    .fl{
+			float: left;
+		}		
+		
+		.fr{
+			float: right;
+		}
+
+		.cl{
+			clear: both;
+		}
+
+		.oh{
+			overflow: hidden;
+		}
+
+		.wrapper{
+			width: 940px;
+			margin: 0 auto;
+		}
+		
+		a{
+			color: black;
+			text-decoration: none;
+		}
+
+		body{
+			background:  url("images/header.png") repeat-x;
+			/*color: #333;*/
+			font-family: "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, sans-serif;
+			font-size: 12px;
+			line-height: 20px;
+		}
+		/*头部*/
+		.header{
+			/*width: 100%;*/
+			height: 146px;
+			background: url("images/header-logo.png") 680px -235px no-repeat;
+		}
+
+		.logo{
+			height: 88px;
+			width: 285px;
+			background:url("images/header-brand-new.png") 0 0 no-repeat;
+		}
+		.logo a{
+			width: 285px;
+			height: 88px;
+			display: block;
+		}
+		.nav_list{
+			width: 100%;
+			height: 38px;
+ 			margin-top: 20px;
+		}
+		.nav_list li{
+			height: 38px;
+			width: 93px;
+			line-height: 38px;
+			text-align: center;
+		}
+		.nav_list li a{
+			color: white;
+			font-weight: bold;
+			font-size: 1.2em;
+		}
+		.nav_list li a:hover{
+			color: #faca52;
+		}
+		.navbar{
+			width: 100%;
+			margin:0 auto;
+			height: 3px;
+			background: url("images/navbar.png") no-repeat;
+		}
+		/*中间*/
+		.banner{
+			width: 100%;
+			height: 360px;
+			position: relative;
+		}
+		.banner .indicator{
+			position: absolute;
+			left: 50%;
+			margin-left: -76px;
+			bottom: 20px;
+		}
+		.indicator li{
+			width: 12px;
+			height: 12px;
+			background-color: #fff;
+			margin-left:10px; 
+			border-radius: 50%;
+		}
+		.indicator .current{
+			background-color: #faca52;
+		}
+		/*三个新闻*/
+		.news-left{
+			width: 300px;
+		}
+		.news-center{
+			width: 460px;
+			height: 200px;
+			margin-left: 20px;
+		}
+		.news-right{
+			width: 140px;
+			margin-left: 20px;
+		}
+		.title{
+			height: 25px;
+			line-height: 25px;
+			border-bottom: 2px solid #faca52;
+			margin-bottom: 10px;
+		}
+		.icon{
+			background-image: url("images/glyphicons-halflings.png");
+			display: inline-block;
+		}
+		.fx{
+			background-position: -460px -76px;
+			width: 8px;
+			height: 12px;
+			position: relative;
+			top: 2px;
+			left: 2px;
+		}
+		.menu{
+			width: 12px;
+			height: 12px;
+			background-position: -361px -50px;
+			float: right;
+			margin-top: 8px;
+		}
+		
+		.title span{
+			margin-left: 20px;
+		}
+
+		.newsTestList1 ul li{
+			margin-right: 15px;
+			margin-bottom: 6px;
+			line-height: 20px;
+		}
+
+		.row-fluid{
+			width: 460px;
+			height: 134px;
+			padding-top: 4px;
+			padding-bottom: 5px;
+		}
+		.row-fluid img{
+			width: 186px;
+			height: 124px;
+		}
+		.row-fluid .row-fluid-1{
+			width: 260px;
+			height: 100px;
+			
+		}
+		.row-fluid .row-fluid-1 h5{
+			margin: 10px 0;
+		}
+		.row-fluid .row-fluid-1 a{
+			color: #0493D1;
+		}
+		.row-fluid .row-fluid-1 a:hover{
+			color: black;
+		}
+		.news-rightlist{
+			width: 118px;
+			height: 300px;
+			background-color: #EFF0F5;
+			border: solid 1px #e6e6e6;
+			padding: 7px 10px;
+			list-style: none;
+    		margin: -10px 0 10px 0;
+		}
+		.news-rightlist a{
+			width: 108px;
+			height: 20px;
+			display: block;
+		}
+		.news-rightlist li{
+			line-height: 20px;
+		}
+		.news-rightlist .icon-list{
+			width:14px;
+			height:14px;
+			background-position:-264px -24px;
+		}
+		
+		.lxyz{
+			width: 940px;
+			height: 294px;
+		}
+		.border-t{
+			border-top:2px solid #FACA52;
+		}
+		.event{
+			float: left;
+    		width: 20%;
+    		height: 140px;
+    		box-sizing:border-box;
+    		padding: 10px 15px;
+    		border-left: solid 1px #E6E6E6;
+    		border-bottom: solid 1px #E6E6E6;
+    		overflow: hidden;
+    		position: relative;
+		}
+		.event .line-break {
+   			 width: 100%;
+		}
+		h5{
+    		margin: 10px 0;
+    		font-family: inherit;
+    		font-weight: bold;
+    		line-height: 20px;
+    		color: inherit;
+    		font-size: 12px;
+    		display: block;
+    		
+		}
+	
+		.event h5 {
+   			margin: 0;
+   			position: absolute;
+   			left: 10px;
+   			bottom: 5px;
+   			color: #B5B5B5;
+		}
+		.event h5:hover{
+			color: black;
+		}
+		/*底部*/
+		#footer {
+			height: 100px;
+		    padding: 20px 20px 0 20px;
+		    margin-top: 0;
+		    background: #066baf;
+		    color: #fff;
+		 }
+		.container-fluid{
+ 		    padding-right: 20px;
+ 		    padding-left: 20px;
+        }
+        .container {
+        	width: 940px;
+        	height: 30px;
+    		margin-right: auto;
+   		    margin-left: auto;
+		}
+		#footer-logo {
+		   	background: url(images/footer-logo.png);
+		  	background-repeat: no-repeat;
+		    height: 50px;
+		    width: 60px;
+		    float: left;
+		}
+		.hide-for-small {
+    		display: inherit !important;
+		}
+		#footer-address {
+			font-style: normal;
+			width: 331px;
+         	float: left;
+        }
+		#footer-address a{
+			color: white;
+		}
+		#footer-links {
+    		float: right;
+		}
+		#footer a {
+    		text-decoration: none;
+    		color: #fff;
+		}
+		#copy-footer {
+			height: 30px;
+    		padding: 10px 20px 0 20px;
+    		margin-top: 0;
+    		background: #0a3f76;
+    		color: #fff;
+		}
+		.pull-right {
+    		float: right;
+		}	
+		.border-r{
+			border-right:1px solid #E6E6E6;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- 头部区 -->
+	<div class="header">
+		<div class="wrapper">
+			<div class="logo">
+				<a href="#"></a>
+			</div>
+			<ul class="nav_list">
+				<li class="fl">
+					<a href="/about/xuexiaojianjie">厦大概览</a>
+				</li>
+				<li class="fl">
+					<a href="/about/xuexiaojianjie">学部院系</a>
+				</li>
+				<li class="fl">
+					<a href="/about/xuexiaojianjie">人才培养</a>
+				</li>
+				<li class="fl">
+					<a href="/about/xuexiaojianjie">学术研究</a>
+				</li>
+				<li class="fl">
+					<a href="/about/xuexiaojianjie">社会服务</a>
+				</li>
+				<li class="fl">
+					<a href="/about/xuexiaojianjie">大学文化</a>
+				</li>
+				<li class="fl">
+					<a href="/about/xuexiaojianjie">合作交流</a>
+				</li>
+				<li class="fl">
+					<a href="/about/xuexiaojianjie">招生就业</a>
+				</li>
+				<li class="fl">
+					<a href="/about/xuexiaojianjie">人才招聘</a>
+				</li>
+				<li class="fl">
+					<a href="/about/xuexiaojianjie">English</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="navbar"></div>
+
+	<!-- 中间部分 -->
+	<div class="main wrapper">
+		<div class="banner">
+			<a href="#" >
+				<img id='mypic' src="images/1.jpg" alt="" />
+			</a>
+			<ul class="indicator">
+				<li class="fl current banner-item"></li>
+				<li class="fl banner-item"></li>
+				<li class="fl banner-item"></li>
+				<li class="fl banner-item"></li>
+				<li class="fl banner-item"></li>
+				<li class="fl banner-item"></li>
+				<li class="fl banner-item"></li>
+				<li class="fl banner-item"></li>
+				<li class="fl banner-item"></li>
+			</ul>
+		</div>
+		<div class="news oh">
+			<div class="news-left fl">
+				<h4 class="title"> <i class="icon fx"></i>
+					<span>厦大新闻</span> <i class="icon menu"></i>
+				</h4>
+				<div class="newsTestList1">
+					<ul>
+						<li>
+							<a href="#">» 药学院刘文教授获“牛顿高级学者基金”资助</a>
+						</li>
+						<li>
+							<a href="#">» 2017年度校级领导班子和领导人员考核...</a>
+						</li>
+						<li>
+							<a href="#">» 我校学子在青年公益实践大赛中勇夺全国总冠军</a>
+						</li>
+						<li>
+							<a href="#">» 我校入选福建省一流大学建设高校，12学...</a>
+						</li>
+						<li>
+							<a href="#">» 校长张荣率团访问马来西亚和新加坡</a>
+						</li>
+						<li>
+							<a href="#">» 经济学院、王亚南经济研究院2018年学...</a>
+						</li>
+						<li>
+							<a href="#">» “青年会客厅”里话招生——我校举行20...</a>
+						</li>
+						<li>
+							<a href="#">» 【学习贯彻十九大】校长张荣参加智能科学...</a>
+						</li>
+						<li>
+							<a href="#">» 教育部财务司副司长赵建军来校调研财务管理工作</a>
+						</li>
+						<li>
+							<a href="#">» 经济学科青年教师蔡熙乾论文被百年老期刊...</a>
+						</li>
+
+					</ul>
+				</div>
+
+				<a href="#">
+					<img src="images/shijiuda.jpg" alt="" />
+				</a>
+
+			</div>
+			<div class="news-center fl">
+				<h4 class="title">
+					<i class="icon fx"></i>
+					<span>焦点要问</span>
+					<i class="icon menu"></i>
+				</h4>
+				<div class="news-imagelist">
+					<div class="row-fluid">
+						<div class="row-fluid-1 fl">
+							<h5>校党委中心组传达学习全国“两会”精神</h5>
+							3月23日下午，校党委中心组学习会在颂恩楼220会议室举行。全国人大代表、我校校长张荣传达全国“两会”精神。
+							<a href="">[详细]</a>
+						</div>
+						<div class="row-fluid-2 fr">
+							<img src="images/495107f2-6d60-4874-956d-252065849f39.jpg" alt=""></div>
+					</div>
+					<div class="row-fluid">
+						<div class="row-fluid-1 fr">
+							<h5>学校召开2017年本科教学评估反馈会</h5>
+							3月16日下午，学校召开2017年本科教学评估反馈暨2018年春季学期教学工作会议。副校长邬大光参会并讲话，评估专家组组长通报评估情况，典范学院做经验交流...
+							<a href="">[详细]</a>
+						</div>
+						<div class="row-fluid-2 fl">
+							<img src="images/757304bc-146a-4158-ab87-3b1ac20b2560.png" alt=""></div>
+					</div>
+				</div>
+
+			</div>
+			<div class="news-right fl">
+				<h4 class="title">
+					<i class="icon fx"></i>
+					<span>快速链接</span>
+				</h4>
+
+				<ul class="news-rightlist">
+					<li>
+						<a href="">
+							<span calss="icon icon-list"></span>
+							官方微博
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span calss="icon icon-list"></span>
+							易班厦大
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span calss="icon icon-list"></span>
+							厦大网址导航
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span calss="icon icon-list"></span>
+							数字资源列表
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span calss="icon icon-list"></span>
+							校友服务
+
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span calss="icon icon-list"></span>
+							教育基金会
+
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span calss="icon icon-list"></span>
+							马来西亚分校
+
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span calss="icon icon-list"></span>
+							嘉庚学院
+
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span calss="icon icon-list"></span>
+							国际学院
+
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span calss="icon icon-list"></span>
+							汉推南方基地
+
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span calss="icon icon-list"></span>
+							网上展馆
+
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span calss="icon icon-list"></span>
+							信息公开
+						</a>
+					</li>
+				</ul>
+
+			</div>
+
+		</div>
+		<div class="lxyz">
+			<ul>
+				<li class="event line-break border-t">
+					<a href="">
+						<img src="images/lxyz1.jpg" alt=""></a>
+					<a href="">
+						<img src="images/sxzz.jpg" alt=""></a>
+				</li>
+				<li class="event border-t">
+					<a href="">2018年厦门大学共建孔子学院中方院长全球招聘启事</a>
+					<a href="">
+						<h5>[主题网站]</h5>
+					</a>
+				</li>
+				<li class="event border-t">
+					<a href="">Several identities related to the degenerate Bernoulli…</a>
+					2018-01-03 10:30
+					海韵行政楼B313
+					<a href="">
+						<h5>[学术讲座]</h5>
+					</a>
+				</li>
+				<li class="event border-t">
+					<a href="">2018年国际学生入学及奖学金申请正在火热进行中</a>
+					发布时间：2018-03-09
+					<a href="">
+						<h5>[通知公告]</h5>
+					</a>
+				</li>
+				<li class="event border-r border-t">
+					<a href="">关于举办厦门大学录取通知书设计大赛的通知</a>
+					发布时间：2017-11-22
+					<a href="">
+						<h5>[通知公告]</h5>
+					</a>
+				</li>
+				<li class="event line-break">
+					<a href="">首届习近平新时代中国特色社会主义经济思想研讨会</a>
+					2018-03-31
+					<a href="">
+						<h5>[学术会议]</h5>
+					</a>
+				</li>
+				<li class="event">
+					<a href="">厦门大学2018年“南强青年学者论坛”公告</a>
+					<a href="">
+						<h5>[通知公告]</h5>
+					</a>
+				</li>
+				<li class="event">
+					<a href="">厦门大学附属翔安医院人才招聘</a>
+					热忱欢迎四海英才！
+					<a href="">
+						<h5>[人才招聘]</h5>
+					</a>
+				</li>
+				<li class="event">
+					<a href="">首届全国“两微一端”百佳评选活动</a>
+					发布时间：2017-11-17
+					<a href="">
+						<h5>[通知公告]</h5>
+					</a>
+				</li>
+				<li class="event border-r">
+					<a href="">厦门大学2018年自主招生简章</a>
+					发布时间：2018-03-23
+					<a href="">
+						<h5>[通知公告]</h5>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 底部 -->
+	<div id="footer">
+		<div class="container container-fluid">
+			<div id="footer-logo" class="hide-for-small"></div>
+			<div id="footer-address"> <strong>厦门大学</strong>
+				<br>
+				<p>厦大总机：0592-2180000
+					<br>
+				地址：福建省厦门市思明区思明南路422号 邮政编码：361005
+					<br>
+					闽ICP备05005471号&nbsp;
+					<a href="">闽公网安备 35020302001480号</a>
+				</p>
+			</div>
+			<div id="footer-links">
+				<a href="">i厦大</a>
+				|
+				<a href="">关于</a>
+			</div>
+		</div>
+	</div>
+	<div id="copy-footer">
+
+		<div class="container container-fluid">
+			<p class="pull-right">©2013 厦门大学 版权所有</p>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var mypic=document.querySelector('#mypic');
+		var bannerItem=document.querySelectorAll('.banner-item');
+		var picSrc=['./images/1.jpg','./images/2.jpg','./images/3.jpg','./images/4.jpg','./images/5.jpg','./images/6.jpg','./images/7.jpg','./images/8.jpg','./images/9.jpg'];
+		var num = 0;
+		setInterval(function(){
+			num ++;
+			mypic.src = picSrc[num%9];
+			for (var i = 0; i < bannerItem.length; i++) {
+				bannerItem[i].style.backgroundColor = 'white'
+			};
+			bannerItem[num%9].style.backgroundColor = 'yellow'
+		}, 3000);
+		for (var i = 0; i < bannerItem.length; i++) {
+			bannerItem[i].onclick = function(z){
+				return function(){
+					for (var j = 0; j< bannerItem.length; j++) {
+						bannerItem[j].style.backgroundColor = 'white';
+					};
+					this.style.backgroundColor = 'yellow'
+					mypic.src = picSrc[z];
+					num = z;
+				}
+			}(i);
+		};
+
+	</script>
+</body>
+</html>
